@@ -1,11 +1,14 @@
 .home {
 
   .content-section {
-    margin: 30px 0;
+    margin: 2rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    padding-top: 3%;
+    border-top: 2px dashed gray;
+ 
+     
     
 
    
@@ -13,14 +16,24 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width: 100%;
+      }
+
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+        
       }
     }
   }
@@ -28,6 +41,15 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    display:flex;
+
+    
+    @media @mobile {
+      display:flex;
+      flex-direction: column-reverse;
+      
+      
+      }
 
     .text-content {
       padding-left: 1%;
@@ -55,13 +77,28 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+
+      display:flex;
+      flex-direction: column;
+      width:100%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+     
+      @media @mobile {
 
+        width:100%;
+      }
       .button{
-        background:aqua;
+       .button-style(rgba(5, 149, 206, 0.767), white, 80%, 20%);
         
+       @media @mobile {
+
+        .button-style(rgba(5, 149, 206, 0.767), white, 90%, 50px);
+      }
   
       }
     }
